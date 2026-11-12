@@ -1,0 +1,23 @@
+{
+  "name": "humo-smash-burgers",
+  "version": "1.0.0",
+  "description": "Sitio de una hamburguesería: menú desde JSON, armador de hamburguesas y carrito con pedido por WhatsApp.",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n sass,web -c yellow,cyan \"npm:css:watch\" \"npm:serve\"",
+    "build": "npm run css",
+    "css": "sass scss/main.scss css/main.css --load-path=node_modules --style=compressed --no-source-map --quiet-deps --silence-deprecation=import",
+    "css:watch": "sass scss/main.scss css/main.css --load-path=node_modules --watch --embed-source-map --quiet-deps --silence-deprecation=import",
+    "serve": "browser-sync start --server --files \"index.html, css/*.css, js/**/*.js, data/*.json\" --no-notify --port 3000"
+  },
+  "keywords": ["hamburgueseria", "sass", "bootstrap", "json"],
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "5.3.8"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.5",
+    "sass": "^1.105.2"
+  }
+}

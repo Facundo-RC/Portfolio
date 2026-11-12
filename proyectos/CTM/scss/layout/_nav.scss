@@ -1,0 +1,142 @@
+// =========================================================
+// Navegación
+// =========================================================
+
+.nav-humo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px $gutter;
+  transition: background .3s, padding .3s, box-shadow .3s;
+
+  &.solida {
+    padding-block: 10px;
+    background: $crema;
+    box-shadow: 0 $grosor-borde 0 $tinta;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: 2.1rem;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: inherit;
+
+  sup { font-size: .4em; font-weight: 600; }
+}
+
+.nav-links {
+  gap: 4px;
+  margin-right: 8px;
+
+  a {
+    padding: .5em 1em;
+    border-radius: $radio-pildora;
+    color: inherit;
+    font-weight: 600;
+    transition: background .2s, color .2s;
+
+    &:hover { background: $tinta; color: $crema; }
+  }
+}
+
+.carrito-btn {
+  @extend %boton-redondo;
+  @include sombra-dura(3px);
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background: $mostaza;
+  transition: transform .15s, box-shadow .15s;
+
+  &:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 $tinta; }
+  &.bump { animation: bump .55s $rebote; }
+}
+
+.contador {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: grid;
+  place-items: center;
+  min-width: 25px;
+  height: 25px;
+  padding: 0 6px;
+  border: 2px solid $tinta;
+  border-radius: $radio-pildora;
+  background: $ketchup;
+  color: $papel;
+  font-size: .78rem;
+  font-weight: 800;
+  transition: scale .3s $rebote;
+
+  &[data-vacio="true"] { scale: 0; }
+}
+
+.menu-btn {
+  @extend %boton-redondo;
+  place-content: center;
+  gap: 7px;
+  width: 52px;
+  height: 52px;
+  background: $papel;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 3px;
+    background: $tinta;
+  }
+}
+
+// Menú mobile: offcanvas de Bootstrap que se abre como un telón circular
+.menu-movil {
+  --bs-offcanvas-height: 100dvh;
+  --bs-offcanvas-bg: #{$ketchup};
+  --bs-offcanvas-border-width: 0;
+  transform: none !important;
+  clip-path: circle(0 at calc(100% - #{$gutter} - 26px) 44px);
+  transition: clip-path .7s $telon;
+
+  &.showing,
+  &.show:not(.hiding) { clip-path: circle(150% at calc(100% - #{$gutter} - 26px) 44px); }
+
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px $gutter;
+  }
+
+  &-links {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: $gutter;
+
+    a {
+      @include display(clamp(2.8rem, 13vw, 4.4rem), 1.05);
+      color: $papel;
+
+      &:hover { color: $mostaza; }
+    }
+  }
+}
+
+.cerrar {
+  @extend %boton-redondo;
+  width: 46px;
+  height: 46px;
+  background: $papel;
+  color: $tinta;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: rotate .3s $rebote, background .2s;
+
+  &:hover { rotate: 90deg; background: $mostaza; }
+}

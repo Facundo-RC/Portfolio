@@ -1,0 +1,43 @@
+// =========================================================
+// Tipografía
+// =========================================================
+
+.eyebrow {
+  @include etiqueta;
+  margin: 0;
+}
+
+.titulo {
+  @include display(fluido(54, 144), .84);
+  margin: .12em 0 0;
+
+  em { font-size: 1.08em; padding-right: .06em; }
+
+  &--medio { font-size: fluido(48, 96); }
+}
+
+// Toda <em> es la serif itálica en ketchup: el contrapunto de los títulos
+em {
+  font-family: $fuente-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  text-transform: none;
+  color: $ketchup;
+}
+
+.bajada {
+  max-width: 34ch;
+  margin: 0;
+  font-size: fluido(17, 20);
+  color: $tinta-2;
+}
+
+.precio {
+  font-family: $fuente-serif;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,57 @@
+// =========================================================
+// Stickers y sello giratorio del hero
+// =========================================================
+
+.sticker {
+  @include borde-tinta(50%);
+  @include sombra-dura(4px);
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: clamp(84px, 9vw, 132px);
+  aspect-ratio: 1;
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: clamp(.85rem, 1.2vw, 1.15rem);
+  line-height: .95;
+  text-align: center;
+  text-transform: uppercase;
+  animation: pop .6s 1.3s $rebote backwards, balanceo 4s 2s ease-in-out infinite;
+
+  &--redondo {
+    left: 17%;
+    top: 2%;
+    background: $mostaza;
+    rotate: -12deg;
+  }
+
+  &--etiqueta {
+    right: 16%;
+    bottom: 4%;
+    width: auto;
+    aspect-ratio: auto;
+    padding: .8em 1.1em;
+    border-radius: 18px;
+    background: $ketchup;
+    color: $papel;
+    rotate: 8deg;
+    animation-delay: 1.45s, 2.4s;
+  }
+}
+
+.sello {
+  position: absolute;
+  left: 13%;
+  bottom: 0;
+  z-index: 4;
+  width: clamp(96px, 10vw, 150px);
+  font-family: $fuente-display;
+  animation: pop .6s 1.6s $rebote backwards;
+
+  .giro {
+    transform-box: view-box;
+    transform-origin: 50% 50%;
+    animation: girar 16s linear infinite;
+  }
+}

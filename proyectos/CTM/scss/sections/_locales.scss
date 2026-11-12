@@ -1,0 +1,102 @@
+// =========================================================
+// Locales
+// =========================================================
+
+.local {
+  @extend %tarjeta;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &-mapa {
+    position: relative;
+    height: 180px;
+    border-bottom: $borde;
+    background-color: #e6d6b4;
+    background-image:
+      radial-gradient(circle at 78% 26%, #b9c77a 0 34px, transparent 35px),
+      linear-gradient(90deg, transparent 45%, $papel 45% 55%, transparent 55%),
+      linear-gradient(0deg, transparent 44%, $papel 44% 56%, transparent 56%),
+      linear-gradient(32deg, transparent 49%, $papel 49% 52%, transparent 52%);
+    background-size: 100% 100%, 92px 92px, 74px 74px, 100% 100%;
+    background-position: 0 0, var(--mx) var(--my), var(--my) var(--mx), 0 0;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 22px 24px 24px;
+
+    h3 { @include display(2.4rem, 1); margin: 0 0 4px; letter-spacing: 0; }
+    p { margin: 0; color: $tinta-2; }
+  }
+}
+
+.locales-grid > * { @include escalonar(3, .1s); }
+
+.pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border: $borde;
+  border-radius: 50% 50% 50% 0;
+  background: $ketchup;
+  translate: -50% -80%;
+  rotate: -45deg;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 2px solid $tinta;
+    border-radius: 50%;
+    background: $papel;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    bottom: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: tono($ketchup, .35);
+    animation: pulso 2s ease-out infinite;
+  }
+}
+
+.estado {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  margin: 8px 0 10px !important;
+  color: $tinta !important;
+  font-size: .9rem;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 2px solid $tinta;
+    border-radius: 50%;
+    background: #b6a98f;
+  }
+
+  &.abierto::before {
+    background: $verde-abierto;
+    box-shadow: 0 0 0 4px tono($verde-abierto, .25);
+  }
+}
+
+.link-flecha {
+  align-self: flex-start;
+  font-weight: 700;
+
+  span { display: inline-block; transition: translate .2s; }
+  &:hover span { translate: 5px 0; }
+}

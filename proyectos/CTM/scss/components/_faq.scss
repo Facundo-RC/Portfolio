@@ -1,0 +1,60 @@
+// =========================================================
+// Preguntas frecuentes (accordion de Bootstrap)
+// =========================================================
+
+.faq {
+  .accordion-item {
+    @include sombra-dura(5px);
+    margin-bottom: 16px;
+    border: $borde !important;
+    border-radius: $radio !important;
+    overflow: hidden;
+
+    &:nth-child(odd) { rotate: -.4deg; }
+    &:nth-child(even) { rotate: .4deg; }
+    @include escalonar(8, .06s);
+  }
+
+  .accordion-button {
+    gap: 16px;
+    border-radius: 0 !important;
+    font-weight: 800;
+    font-size: fluido(18, 22);
+
+    &:not(.collapsed) { box-shadow: none; }
+
+    // Ícono "+" que gira a "×"
+    &::after {
+      @include borde-tinta(50%);
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      background-color: $papel;
+      background-image: none;
+      content: "+";
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1;
+      transform: none;
+      transition: rotate .35s $rebote;
+    }
+
+    &:not(.collapsed)::after { rotate: 45deg; background-image: none; }
+  }
+
+  .accordion-body {
+    padding-top: 1.1rem;
+    padding-bottom: 1.4rem;
+    color: $tinta-2;
+    font-size: 1.05rem;
+  }
+}
+
+.faq-lateral {
+  position: sticky;
+  top: calc(#{$alto-nav} + 20px);
+
+  .btn { margin-top: 28px; }
+}

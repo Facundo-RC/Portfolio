@@ -1,0 +1,168 @@
+// =========================================================
+// Bootstrap 5 personalizado con la identidad de HUMO
+// Se importa solo lo que la web usa.
+// =========================================================
+
+@use "sass:map";
+
+// 1. Funciones (necesarias antes de tocar variables)
+@import "bootstrap/scss/functions";
+
+// 2. Overrides de variables
+$primary: $ketchup;
+$warning: $mostaza;
+$success: $pepino;
+$danger: $ketchup;
+$dark: $tinta;
+$light: $papel;
+$min-contrast-ratio: 3;
+$color-contrast-dark: $tinta;
+$color-contrast-light: $papel;
+$enable-dark-mode: false;
+$enable-shadows: false;
+$enable-negative-margins: true;
+
+$body-bg: $crema;
+$body-color: $tinta;
+$body-secondary-color: $tinta-2;
+$font-family-sans-serif: $fuente-display;
+$font-size-base: 1.0625rem;
+$headings-font-weight: 800;
+$link-color: $tinta;
+$link-decoration: none;
+$link-hover-color: $ketchup;
+
+$border-width: $grosor-borde;
+$border-color: $tinta;
+$border-radius: $radio-chico;
+$border-radius-lg: $radio;
+$border-radius-pill: $radio-pildora;
+$grid-gutter-width: 2rem;
+
+$btn-font-weight: 700;
+$btn-border-width: $grosor-borde;
+$btn-padding-y: .9rem;
+$btn-padding-x: 1.6rem;
+$btn-padding-y-sm: .6rem;
+$btn-padding-x-sm: 1.15rem;
+$btn-font-size-sm: .92rem;
+$btn-border-radius: $radio-pildora;
+$btn-border-radius-sm: $radio-pildora;
+$btn-border-radius-lg: $radio-pildora;
+
+$input-bg: $papel;
+$input-border-color: $tinta;
+$input-focus-border-color: $tinta;
+$input-focus-box-shadow: 0 0 0 .25rem tono($mostaza, .6);
+$input-placeholder-color: tono($tinta, .45);
+$input-padding-y: .8rem;
+$input-padding-x: 1rem;
+$form-label-font-weight: 700;
+$form-feedback-invalid-color: $ketchup;
+
+$nav-link-padding-y: .65rem;
+$nav-link-padding-x: 1.35rem;
+$nav-link-font-weight: 700;
+$nav-link-color: $tinta;
+$nav-link-hover-color: $tinta;
+$nav-pills-border-radius: $radio-pildora;
+$nav-pills-link-active-bg: $tinta;
+$nav-pills-link-active-color: $crema;
+
+$offcanvas-horizontal-width: 440px;
+$offcanvas-bg-color: $crema;
+$offcanvas-color: $tinta;
+$offcanvas-border-width: $grosor-borde;
+$offcanvas-border-color: $tinta;
+$offcanvas-backdrop-bg: $tinta;
+$offcanvas-backdrop-opacity: .5;
+$offcanvas-transition-duration: .45s;
+
+$modal-content-bg: $crema;
+$modal-content-border-width: $grosor-borde;
+$modal-content-border-color: $tinta;
+$modal-content-border-radius: $radio;
+$modal-header-border-width: $grosor-borde;
+$modal-footer-border-width: $grosor-borde;
+$modal-header-padding: 1.25rem 1.5rem;
+$modal-inner-padding: 1.5rem;
+$modal-backdrop-bg: $tinta;
+$modal-backdrop-opacity: .55;
+
+$accordion-bg: $papel;
+$accordion-color: $tinta;
+$accordion-border-color: $tinta;
+$accordion-border-width: $grosor-borde;
+$accordion-border-radius: $radio;
+$accordion-button-padding-y: 1.3rem;
+$accordion-button-padding-x: 1.5rem;
+$accordion-body-padding-y: 0;
+$accordion-body-padding-x: 1.5rem;
+$accordion-button-active-bg: $mostaza;
+$accordion-button-active-color: $tinta;
+$accordion-button-focus-box-shadow: none;
+$accordion-icon-color: $tinta;
+$accordion-icon-active-color: $tinta;
+
+$toast-max-width: 440px;
+$toast-padding-x: 1.4rem;
+$toast-padding-y: .85rem;
+$toast-font-size: 1rem;
+$toast-color: $tinta;
+$toast-background-color: $mostaza;
+$toast-border-width: $grosor-borde;
+$toast-border-color: $tinta;
+$toast-border-radius: $radio-pildora;
+$toast-box-shadow: 4px 4px 0 $tinta;
+
+$alert-border-width: $grosor-borde;
+$alert-border-radius: $radio;
+$placeholder-opacity-max: .22;
+$placeholder-opacity-min: .08;
+
+// 3. Variables y mapas de Bootstrap
+@import "bootstrap/scss/variables";
+
+// Colores propios dentro del sistema de Bootstrap → .btn-mostaza, .bg-papel, .text-crema…
+$theme-colors: map.merge($theme-colors, (
+  "mostaza": $mostaza,
+  "crema": $crema,
+  "papel": $papel
+));
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Utilidades propias generadas con la API de utilidades de Bootstrap
+$utilities: map.merge($utilities, (
+  "rotacion": (
+    property: rotate,
+    class: rot,
+    values: (n2: -2deg, n1: -1.3deg, 0: 0deg, 1: 1.3deg, 2: 2deg)
+  ),
+  "familia": (
+    property: font-family,
+    class: font,
+    values: (serif: $fuente-serif, display: $fuente-display)
+  )
+));
+
+// 4. Solo los componentes que se usan
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";

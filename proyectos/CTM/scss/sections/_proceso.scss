@@ -1,0 +1,76 @@
+// =========================================================
+// Cómo la hacemos
+// =========================================================
+
+$linea-clara: 2px solid tono($crema, .25);
+
+.proceso {
+  margin-inline: clamp(8px, 1.5vw, 20px);
+  border-radius: clamp(28px, 4vw, 56px);
+  background: $tinta;
+  color: $crema;
+
+  .titulo em { color: $mostaza; }
+  .bajada { color: tono($crema, .7); }
+}
+
+.paso {
+  height: 100%;
+  padding-top: 24px;
+  border-top: $linea-clara;
+
+  &-num {
+    display: block;
+    font-weight: 800;
+    font-stretch: 75%;
+    font-size: fluido(80, 136);
+    line-height: .8;
+    color: transparent;
+    -webkit-text-stroke: 2px $mostaza;
+  }
+
+  h3 {
+    @include display(2rem, 1);
+    margin: 18px 0 8px;
+    letter-spacing: 0;
+  }
+
+  p { max-width: 32ch; margin: 0; color: tono($crema, .75); }
+}
+
+.pasos > * { @include escalonar(3, .12s); }
+
+.cifras {
+  margin-top: clamp(60px, 8vw, 110px);
+  border: $linea-clara;
+  border-radius: $radio;
+}
+
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: clamp(20px, 3vw, 36px);
+
+  strong {
+    font-family: $fuente-serif;
+    font-weight: 400;
+    font-size: fluido(48, 88);
+    line-height: 1;
+    color: $mostaza;
+    font-variant-numeric: tabular-nums;
+  }
+
+  span { color: tono($crema, .7); }
+}
+
+// Separadores entre cifras: verticales en desktop, horizontales en mobile
+.cifras > * + * .cifra {
+  border-top: $linea-clara;
+
+  @include media-breakpoint-up(md) {
+    border-top: 0;
+    border-left: $linea-clara;
+  }
+}

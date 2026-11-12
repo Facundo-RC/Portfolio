@@ -1,0 +1,55 @@
+// =========================================================
+// Cintas cruzadas con texto en movimiento
+// =========================================================
+
+@use "sass:map";
+
+$cintas: (
+  "amarilla": (fondo: $mostaza, texto: $tinta, giro: 2.5deg, top: 22%, duracion: 46s, sentido: reverse),
+  "roja": (fondo: $ketchup, texto: $papel, giro: -3deg, top: 38%, duracion: 38s, sentido: normal)
+);
+
+.cintas {
+  position: relative;
+  height: clamp(150px, 16vw, 210px);
+  overflow: clip;
+}
+
+.cinta {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  padding: .55em 0;
+  border-block: $borde;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @each $nombre, $cinta in $cintas {
+    &--#{$nombre} {
+      top: map.get($cinta, top);
+      background: map.get($cinta, fondo);
+      color: map.get($cinta, texto);
+      rotate: map.get($cinta, giro);
+
+      .cinta-track {
+        animation-duration: map.get($cinta, duracion);
+        animation-direction: map.get($cinta, sentido);
+      }
+    }
+  }
+
+  &--roja { z-index: 2; }
+
+  &-track {
+    display: inline-flex;
+    animation: marquesina 40s linear infinite;
+
+    span {
+      @include display(fluido(26, 44), 1.1);
+      padding-inline: .45em;
+      letter-spacing: 0;
+    }
+
+    .sep { font-weight: 400; }
+  }
+}

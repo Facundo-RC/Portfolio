@@ -1,0 +1,41 @@
+// =========================================================
+// HUMO — Smash Burgers
+// Hoja principal: arquitectura 7-1 simplificada
+// =========================================================
+
+// 1. Abstracts — variables, funciones y mixins (no generan CSS)
+@import "abstracts/variables";
+@import "abstracts/funciones";
+@import "abstracts/mixins";
+
+// 2. Vendors — Bootstrap personalizado
+@import "vendors/bootstrap";
+
+// 3. Base
+@import "base/base";
+@import "base/tipografia";
+@import "base/animaciones";
+
+// 4. Layout
+@import "layout/nav";
+@import "layout/secciones";
+@import "layout/pie";
+
+// 5. Componentes
+@import "components/botones";
+@import "components/stickers";
+@import "components/plato";
+@import "components/stepper";
+@import "components/tabs";
+@import "components/carrito";
+@import "components/checkout";
+@import "components/faq";
+@import "components/toast";
+
+// 6. Secciones
+@import "sections/hero";
+@import "sections/cintas";
+@import "sections/proceso";
+@import "sections/armador";
+@import "sections/resenas";
+@import "sections/locales";

@@ -1,0 +1,72 @@
+// =========================================================
+// Checkout (modal + formulario de Bootstrap)
+// =========================================================
+
+.checkout {
+  .modal-header { align-items: center; }
+
+  .modal-title {
+    @include display(fluido(36, 52), .9);
+
+    em { font-size: 1.1em; }
+  }
+
+  .form-control,
+  .form-select { font-weight: 600; }
+
+  .opcional { color: $tinta-2; font-weight: 400; }
+}
+
+// Opciones de entrega: radios de Bootstrap (.btn-check) con look de tarjeta
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @include media-breakpoint-down(sm) { grid-template-columns: 1fr; }
+}
+
+.opcion {
+  --bs-btn-bg: #{$papel};
+  --bs-btn-hover-bg: #{$papel};
+  --bs-btn-active-bg: #{$mostaza};
+  --bs-btn-border-color: #{$tinta};
+  --bs-btn-hover-border-color: #{$tinta};
+  --bs-btn-active-border-color: #{$tinta};
+  --bs-btn-active-color: #{$tinta};
+  --bs-btn-padding-y: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .35em;
+  border-radius: $radio-chico;
+  text-align: left;
+
+  small { font-weight: 600; color: $tinta-2; }
+
+  .btn-check:checked + & { background: $mostaza; }
+}
+
+.resumen {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin: 0;
+
+  &-fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: $tinta-2;
+  }
+
+  &-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 10px;
+    border-top: 2px dashed tono($tinta, .3);
+    font-weight: 700;
+
+    .precio { font-size: 2.2rem; color: $tinta; }
+  }
+}

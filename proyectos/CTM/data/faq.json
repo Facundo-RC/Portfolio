@@ -1,0 +1,26 @@
+[
+  {
+    "pregunta": "¿Hacen delivery?",
+    "respuesta": "Sí, en un radio de 4 km de cada local. El envío cuesta $1.500 y tarda entre 25 y 40 minutos según la hora."
+  },
+  {
+    "pregunta": "¿Tienen opciones veggie o sin TACC?",
+    "respuesta": "La Verde es 100% vegetariana. Tenemos pan sin TACC a pedido, pero la cocina es compartida y no podemos garantizar que no haya trazas."
+  },
+  {
+    "pregunta": "¿Puedo pedir la carne jugosa?",
+    "respuesta": "El smash se cocina aplastado contra la plancha bien caliente: así se forma la costra. Por eso siempre sale a punto y no la hacemos jugosa."
+  },
+  {
+    "pregunta": "¿Cómo puedo pagar?",
+    "respuesta": "Efectivo, transferencia o Mercado Pago. Lo elegís al finalizar el pedido y te confirmamos por WhatsApp."
+  },
+  {
+    "pregunta": "¿Toman reservas?",
+    "respuesta": "No, funcionamos por orden de llegada. Martes y miércoles son los días con menos espera."
+  },
+  {
+    "pregunta": "¿Hacen eventos?",
+    "respuesta": "Sí, llevamos la plancha a eventos de 50 a 300 personas. Escribinos por WhatsApp y armamos un presupuesto."
+  }
+]

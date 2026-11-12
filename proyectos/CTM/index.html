@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HUMO — Smash Burgers</title>
+  <meta name="description" content="HUMO: smash burgers hechas al momento. Carne fresca, pan de papa y cheddar que chorrea. Pedí online o armá la tuya.">
+  <meta name="theme-color" content="#f5ebd7">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Bootstrap + estilos propios, compilados desde /scss -->
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="saltar" href="#menu">Saltar al menú</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav-humo fixed-top" id="nav">
+    <a class="logo" href="#inicio" aria-label="HUMO, volver al inicio">HUMO<sup>®</sup></a>
+    <nav class="nav-links d-none d-lg-flex" aria-label="Principal">
+      <a href="#menu">Menú</a>
+      <a href="#arma">Armá la tuya</a>
+      <a href="#proceso">Cómo la hacemos</a>
+      <a href="#locales">Locales</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <button class="carrito-btn" id="abrirCarrito" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito" aria-label="Ver tu pedido">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="contador" id="contador" data-vacio="true">0</span>
+    </button>
+    <button class="menu-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovil" aria-controls="menuMovil" aria-label="Abrir menú">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menú mobile (offcanvas) -->
+  <div class="offcanvas offcanvas-top menu-movil" tabindex="-1" id="menuMovil" aria-label="Menú de navegación">
+    <div class="menu-movil-head">
+      <span class="logo text-papel">HUMO<sup>®</sup></span>
+      <button class="cerrar" type="button" data-bs-dismiss="offcanvas" aria-label="Cerrar menú">✕</button>
+    </div>
+    <nav class="menu-movil-links" aria-label="Principal">
+      <a href="#menu">Menú</a>
+      <a href="#arma">Armá la tuya</a>
+      <a href="#proceso">Cómo la hacemos</a>
+      <a href="#locales">Locales</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-meta">
+        <p class="eyebrow">Smash burgers</p>
+        <p class="eyebrow">Est. 2019 · Hechas al momento</p>
+      </div>
+
+      <div class="hero-centro">
+        <h1 class="hero-titulo">
+          <span class="letras" aria-hidden="true">HU</span><span class="letras" aria-hidden="true">MO</span>
+          <span class="visually-hidden">HUMO — Smash burgers</span>
+        </h1>
+        <div class="hero-burger" id="heroBurger" aria-hidden="true"></div>
+
+        <span class="sticker sticker--redondo" aria-hidden="true">Doble<br>cheddar</span>
+        <span class="sticker sticker--etiqueta" aria-hidden="true">Carne<br>100% fresca</span>
+
+        <svg class="sello" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circuloSello" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+          <circle cx="100" cy="100" r="97" fill="#1a1210"/>
+          <g class="giro">
+            <text fill="#f5ebd7" font-size="19" font-weight="800" letter-spacing="2"><textPath href="#circuloSello" textLength="462">SMASH BURGERS ✺ HECHAS AL MOMENTO ✺</textPath></text>
+          </g>
+          <text x="100" y="122" text-anchor="middle" fill="#f2b705" font-size="64">★</text>
+        </svg>
+      </div>
+
+      <div class="hero-pie">
+        <p class="hero-lema">Aplastadas contra la plancha, servidas <em>con amor</em> y mucho humo.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#menu">Ver el menú <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-light" href="#arma">Armá la tuya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CINTAS ============ -->
+    <div class="cintas" aria-hidden="true">
+      <div class="cinta cinta--amarilla"><div class="cinta-track" data-items="Hechas al momento|Sin congelados|Abierto hasta las 00 h|Pedí por WhatsApp"></div></div>
+      <div class="cinta cinta--roja"><div class="cinta-track" data-items="Smash burgers|Pan de papa|Cheddar que chorrea|Papas cortadas a mano|Delivery & take away"></div></div>
+    </div>
+
+    <!-- ============ MENÚ (data/menu.json) ============ -->
+    <section class="seccion" id="menu">
+      <div class="row align-items-end g-4 seccion-head" data-reveal>
+        <div class="col-lg-7">
+          <p class="eyebrow">01 — La carta</p>
+          <h2 class="titulo">El <em>menú</em></h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="bajada">Pan de papa, carne smasheada al momento y cheddar que se derrite como tiene que derretirse.</p>
+        </div>
+      </div>
+
+      <ul class="nav nav-pills tabs-humo" id="menuTabs" role="tablist"></ul>
+
+      <div class="tab-content" id="menuPaneles">
+        <!-- Esqueleto mientras llega el JSON -->
+        <div class="row g-4" aria-hidden="true">
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="plato plato--esqueleto placeholder-glow">
+              <div class="plato-arte"></div>
+              <div class="plato-info">
+                <span class="placeholder placeholder-lg col-7"></span>
+                <span class="placeholder col-11"></span>
+                <span class="placeholder col-4"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 d-none d-md-block">
+            <div class="plato plato--esqueleto placeholder-glow">
+              <div class="plato-arte"></div>
+              <div class="plato-info">
+                <span class="placeholder placeholder-lg col-6"></span>
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-4"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 d-none d-xl-block">
+            <div class="plato plato--esqueleto placeholder-glow">
+              <div class="plato-arte"></div>
+              <div class="plato-info">
+                <span class="placeholder placeholder-lg col-8"></span>
+                <span class="placeholder col-9"></span>
+                <span class="placeholder col-4"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="proceso seccion" id="proceso">
+      <div class="row align-items-end g-4 seccion-head" data-reveal>
+        <div class="col-lg-7">
+          <p class="eyebrow">02 — El método</p>
+          <h2 class="titulo">Cómo la <em>hacemos</em></h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="bajada">Tres pasos, cero atajos. Así es cada una de las burgers que sale de la cocina.</p>
+        </div>
+      </div>
+
+      <ol class="row g-5 list-unstyled mb-0 pasos">
+        <li class="col-md-4" data-reveal>
+          <div class="paso">
+            <span class="paso-num">01</span>
+            <h3>La bolita</h3>
+            <p>Blend propio de vacío y bife ancho, picado todas las mañanas. Nada congelado, nunca.</p>
+          </div>
+        </li>
+        <li class="col-md-4" data-reveal>
+          <div class="paso">
+            <span class="paso-num">02</span>
+            <h3>¡Smash!</h3>
+            <p>La aplastamos contra la plancha a 250°. Así nace la costra crocante que nos hizo conocidos.</p>
+          </div>
+        </li>
+        <li class="col-md-4" data-reveal>
+          <div class="paso">
+            <span class="paso-num">03</span>
+            <h3>Pan de papa</h3>
+            <p>Horneado por nuestra panadería y tostado con manteca segundos antes de armar.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="row g-0 cifras" data-reveal>
+        <div class="col-md-4"><div class="cifra"><strong data-contar="120000" data-prefijo="+">0</strong><span>burgers servidas</span></div></div>
+        <div class="col-md-4"><div class="cifra"><strong data-contar="4.9" data-decimales="1" data-sufijo="★">0</strong><span>promedio en reseñas</span></div></div>
+        <div class="col-md-4"><div class="cifra"><strong data-contar="8" data-sufijo="′">0</strong><span>de la plancha a tu mano</span></div></div>
+      </div>
+    </section>
+
+    <!-- ============ ARMÁ LA TUYA (data/armador.json) ============ -->
+    <section class="seccion" id="arma">
+      <div class="row align-items-end g-4 seccion-head" data-reveal>
+        <div class="col-lg-7">
+          <p class="eyebrow">03 — El taller</p>
+          <h2 class="titulo">Armá la <em>tuya</em></h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="bajada">Sumá, sacá y apilá. Vos ponés las reglas; nosotros, la plancha.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 g-xl-5">
+        <div class="col-lg-7">
+          <div class="escenario" data-reveal>
+            <div class="arma-burger" id="armaBurger"></div>
+            <div class="arma-plato" aria-hidden="true"></div>
+            <div class="hambrometro">
+              <span>Hambrómetro</span>
+              <div class="hambrometro-barra"><i id="hambreBarra"></i></div>
+              <strong id="hambreNivel">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="panel-armado" data-reveal>
+            <ul class="ingredientes" id="ingredientes"></ul>
+            <div>
+              <label class="form-label" for="nombreBurger">Ponele nombre</label>
+              <input class="form-control" id="nombreBurger" type="text" maxlength="28" placeholder="La Bestia" autocomplete="off">
+            </div>
+            <div class="arma-total">
+              <span>Total</span>
+              <strong class="precio" id="armaPrecio">$0</strong>
+            </div>
+            <button class="btn btn-primary w-100" id="armaAgregar" type="button">Agregar al pedido <span aria-hidden="true">+</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEÑAS (data/resenas.json) ============ -->
+    <section class="seccion resenas">
+      <div class="seccion-head" data-reveal>
+        <p class="eyebrow">04 — Lo que dicen</p>
+        <h2 class="titulo">La gente <em>habla</em></h2>
+      </div>
+      <div class="resenas-track" id="resenasTrack"></div>
+    </section>
+
+    <!-- ============ LOCALES (data/negocio.json) ============ -->
+    <section class="seccion" id="locales">
+      <div class="row align-items-end g-4 seccion-head" data-reveal>
+        <div class="col-lg-7">
+          <p class="eyebrow">05 — Dónde estamos</p>
+          <h2 class="titulo">Vení a <em>comer</em></h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="bajada" id="horarioTexto"></p>
+        </div>
+      </div>
+      <div class="row g-4 locales-grid" id="localesGrid"></div>
+    </section>
+
+    <!-- ============ PREGUNTAS (data/faq.json) ============ -->
+    <section class="seccion" id="preguntas">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <div class="faq-lateral" data-reveal>
+            <p class="eyebrow">06 — Preguntas</p>
+            <h2 class="titulo titulo--medio">Dudas <em>frecuentes</em></h2>
+            <p class="bajada mt-3">¿No encontrás lo que buscás? Escribinos y te respondemos al toque.</p>
+            <a class="btn btn-mostaza" id="faqWhatsapp" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion faq" id="faqLista"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="pie">
+    <div class="pie-burger" id="pieBurger" aria-hidden="true"></div>
+    <p class="pie-grande">¿Tenés<br><em>hambre?</em></p>
+    <a class="btn btn-mostaza" href="#menu">Pedí ahora</a>
+    <div class="pie-fila">
+      <span>HUMO® Smash Burgers — <span id="anio">2026</span></span>
+      <nav class="pie-redes" aria-label="Redes sociales">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============ CARRITO (offcanvas) ============ -->
+  <aside class="offcanvas offcanvas-end carrito" tabindex="-1" id="carrito" aria-labelledby="carritoTitulo">
+    <div class="carrito-head">
+      <h2 id="carritoTitulo">Tu pedido</h2>
+      <button class="cerrar" type="button" data-bs-dismiss="offcanvas" aria-label="Cerrar pedido">✕</button>
+    </div>
+    <ul class="carrito-lista" id="carritoLista"></ul>
+    <div class="carrito-vacio" id="carritoVacio">
+      <p class="carrito-vacio-titulo">Acá no hay nada… todavía.</p>
+      <p>¿Arrancamos con una Doble Humo?</p>
+      <button class="btn btn-light btn-sm" type="button" data-ir="#menu">Ver el menú</button>
+    </div>
+    <div class="carrito-pie" id="carritoPie">
+      <div class="total"><span>Total</span><strong class="precio" id="carritoTotal">$0</strong></div>
+      <button class="btn btn-primary w-100" id="irACheckout" type="button">Finalizar pedido <span aria-hidden="true">→</span></button>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT (modal + formulario con validación) ============ -->
+  <div class="modal fade checkout" id="checkout" tabindex="-1" aria-labelledby="checkoutTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" id="formCheckout" novalidate>
+        <div class="modal-header">
+          <h2 class="modal-title" id="checkoutTitulo">Casi <em>listo</em></h2>
+          <button class="cerrar ms-auto" type="button" data-bs-dismiss="modal" aria-label="Cerrar">✕</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="cNombre">Nombre</label>
+              <input class="form-control" id="cNombre" name="nombre" type="text" required minlength="2" autocomplete="name">
+              <div class="invalid-feedback">¿Cómo te llamamos?</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="cTelefono">Teléfono</label>
+              <input class="form-control" id="cTelefono" name="telefono" type="tel" required pattern="[\d\s\(\)\+\-]{8,}" autocomplete="tel" placeholder="11 2345 6789">
+              <div class="invalid-feedback">Necesitamos un teléfono válido para confirmar.</div>
+            </div>
+
+            <div class="col-12">
+              <span class="form-label d-block">¿Cómo lo querés?</span>
+              <div class="opciones">
+                <input class="btn-check" type="radio" name="entrega" id="eDelivery" value="delivery" checked>
+                <label class="btn opcion" for="eDelivery">🛵 Delivery <small id="envioCosto"></small></label>
+                <input class="btn-check" type="radio" name="entrega" id="eRetiro" value="retiro">
+                <label class="btn opcion" for="eRetiro">🏃 Retiro en el local <small>Gratis</small></label>
+              </div>
+            </div>
+
+            <div class="col-12" id="campoDireccion">
+              <label class="form-label" for="cDireccion">Dirección</label>
+              <input class="form-control" id="cDireccion" name="direccion" type="text" required autocomplete="street-address" placeholder="Calle, número, piso / depto">
+              <div class="invalid-feedback">Indicá dónde te lo llevamos.</div>
+            </div>
+            <div class="col-12 d-none" id="campoLocal">
+              <label class="form-label" for="cLocal">Local</label>
+              <select class="form-select" id="cLocal" name="local" required disabled></select>
+              <div class="invalid-feedback">Elegí en qué local lo retirás.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label" for="cPago">Pago</label>
+              <select class="form-select" id="cPago" name="pago" required>
+                <option value="">Elegí…</option>
+                <option>Efectivo</option>
+                <option>Transferencia</option>
+                <option>Mercado Pago</option>
+              </select>
+              <div class="invalid-feedback">Elegí cómo vas a pagar.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="cNotas">Notas <span class="opcional">(opcional)</span></label>
+              <input class="form-control" id="cNotas" name="notas" type="text" maxlength="120" placeholder="Sin cebolla, timbre roto…">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer flex-column align-items-stretch gap-3">
+          <div class="resumen" id="resumen"></div>
+          <button class="btn btn-primary w-100" type="submit">Enviar pedido por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ AVISO (toast) ============ -->
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+    <div class="toast toast-humo" id="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="2400">
+      <div class="toast-body" id="toastTexto"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

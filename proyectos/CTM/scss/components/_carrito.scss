@@ -1,0 +1,110 @@
+// =========================================================
+// Carrito (offcanvas de Bootstrap)
+// =========================================================
+
+.carrito {
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: $borde;
+
+    h2 { @include display(2.4rem, 1); margin: 0; }
+  }
+
+  &-lista {
+    flex: 1;
+    margin: 0;
+    padding: 4px 24px;
+    overflow-y: auto;
+    list-style: none;
+
+    &:empty { display: none; }
+  }
+
+  &-vacio {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 40px 32px;
+    text-align: center;
+
+    &.visible { display: flex; }
+
+    p { margin: 0; color: $tinta-2; }
+    .btn { margin-top: 18px; }
+  }
+
+  &-vacio-titulo {
+    font-family: $fuente-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: $tinta !important;
+  }
+
+  &-pie {
+    display: grid;
+    gap: 16px;
+    padding: 20px 24px 24px;
+    border-top: $borde;
+    background: $papel;
+
+    &[hidden] { display: none; }
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 66px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 2px dashed tono($tinta, .2);
+  animation: entrar .4s $suave;
+
+  &-arte {
+    @include borde-tinta($radio-chico);
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    padding: 8px;
+    background: var(--bg, #{$mostaza});
+
+    svg { width: 100%; height: 100%; }
+  }
+
+  &-texto { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+  &-nombre { font-weight: 800; }
+
+  &-detalle {
+    overflow: hidden;
+    color: $tinta-2;
+    font-size: .8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .precio { margin-top: 2px; font-size: 1.3rem; }
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  span { @include etiqueta(.85rem); letter-spacing: .12em; }
+  .precio { font-size: 2.4rem; }
+}
+
+// Un clon del dibujo vuela hasta el carrito
+.volando {
+  position: fixed;
+  z-index: 1100;
+  margin: 0;
+  pointer-events: none;
+}

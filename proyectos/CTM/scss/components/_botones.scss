@@ -1,0 +1,40 @@
+// =========================================================
+// Botones: .btn de Bootstrap con borde de tinta y sombra dura
+// =========================================================
+
+.btn {
+  --bs-btn-line-height: 1;
+  @include sombra-dura(4px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6em;
+  transition: transform .15s, box-shadow .15s, background-color .2s, color .2s;
+
+  &:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 $tinta; }
+  &:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 $tinta; }
+  &:focus-visible { box-shadow: 4px 4px 0 $tinta, 0 0 0 .3rem tono($mostaza, .7); }
+}
+
+.btn-sm { @include sombra-dura(3px); }
+
+// Variantes de la marca: todas comparten el borde de tinta
+$variantes-boton: (
+  "primary": $ketchup,
+  "mostaza": $mostaza,
+  "light": $papel,
+  "papel": $papel
+);
+
+@each $nombre, $color in $variantes-boton {
+  .btn-#{$nombre} {
+    @include button-variant(
+      $color,
+      $tinta,
+      $hover-background: $color,
+      $hover-border: $tinta,
+      $active-background: shade-color($color, 8%),
+      $active-border: $tinta
+    );
+  }
+}

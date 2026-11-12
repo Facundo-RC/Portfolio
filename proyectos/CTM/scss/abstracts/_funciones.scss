@@ -1,0 +1,23 @@
+// =========================================================
+// Funciones
+// =========================================================
+
+@use "sass:color";
+@use "sass:math";
+
+// px → rem
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Un color de la paleta con transparencia
+@function tono($color, $alfa) {
+  @return color.change($color, $alpha: $alfa);
+}
+
+// Escala tipográfica fluida entre dos tamaños (en px) para un rango de viewport
+@function fluido($min, $max, $vw-min: 375, $vw-max: 1440) {
+  $pendiente: math.div($max - $min, $vw-max - $vw-min);
+  $base: $min - $pendiente * $vw-min;
+  @return clamp(#{rem($min)}, #{rem($base)} + #{$pendiente * 100vw}, #{rem($max)});
+}

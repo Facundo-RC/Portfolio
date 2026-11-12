@@ -1,0 +1,154 @@
+{
+  "categorias": [
+    {
+      "id": "burgers",
+      "nombre": "Burgers",
+      "items": [
+        {
+          "id": "clasica",
+          "nombre": "La Clásica",
+          "precio": 8900,
+          "descripcion": "Medallón smash, cheddar, lechuga, tomate y salsa HUMO.",
+          "fondo": "pan",
+          "capas": ["panArriba", "lechuga", "tomate", "queso", "carne", "panAbajo"]
+        },
+        {
+          "id": "doble",
+          "nombre": "Doble Humo",
+          "precio": 11500,
+          "etiqueta": "La más pedida",
+          "descripcion": "Doble medallón, doble cheddar, cebolla y bacon crocante.",
+          "fondo": "mostaza",
+          "capas": ["panArriba", "cebolla", "bacon", "queso", "carne", "queso", "carne", "panAbajo"]
+        },
+        {
+          "id": "triple",
+          "nombre": "Triple Amenaza",
+          "precio": 13900,
+          "etiqueta": "Solo valientes",
+          "descripcion": "Tres medallones, triple cheddar, pepinos y mostaza.",
+          "fondo": "tomate",
+          "capas": ["panArriba", "pepinos", "queso", "carne", "queso", "carne", "queso", "carne", "panAbajo"]
+        },
+        {
+          "id": "bacon",
+          "nombre": "Bacon Bomb",
+          "precio": 12200,
+          "descripcion": "Doble bacon, cheddar, cebolla caramelizada y barbacoa ahumada.",
+          "fondo": "papel-madera",
+          "capas": ["panArriba", "bacon", "bacon", "cebolla", "queso", "carne", "panAbajo"]
+        },
+        {
+          "id": "verde",
+          "nombre": "La Verde",
+          "precio": 9500,
+          "etiqueta": "Veggie",
+          "descripcion": "Medallón de garbanzos y hongos, cheddar, lechuga, tomate y alioli.",
+          "fondo": "lechuga",
+          "capas": ["panArriba", "lechuga", "tomate", "queso", "veggie", "panAbajo"]
+        },
+        {
+          "id": "kids",
+          "nombre": "Smash Kids",
+          "precio": 6900,
+          "descripcion": "Medallón simple con cheddar y ketchup. Viene con sorpresa.",
+          "fondo": "frutilla",
+          "capas": ["panArriba", "queso", "carne", "panAbajo"]
+        }
+      ]
+    },
+    {
+      "id": "papas",
+      "nombre": "Papas",
+      "items": [
+        {
+          "id": "papas-humo",
+          "nombre": "Papas HUMO",
+          "precio": 5200,
+          "etiqueta": "Para compartir",
+          "descripcion": "Papas rústicas con cheddar fundido, bacon y verdeo.",
+          "fondo": "mostaza",
+          "arte": { "tipo": "papas", "cheddar": true }
+        },
+        {
+          "id": "papas",
+          "nombre": "Papas clásicas",
+          "precio": 3800,
+          "descripcion": "Cortadas a mano, doble cocción y sal en escamas.",
+          "fondo": "papel-madera",
+          "arte": { "tipo": "papas", "cheddar": false }
+        },
+        {
+          "id": "aros",
+          "nombre": "Aros de cebolla",
+          "precio": 4300,
+          "descripcion": "Rebozados en cerveza, con dip de barbacoa ahumada.",
+          "fondo": "tomate",
+          "arte": { "tipo": "aros" }
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "nombre": "Bebidas",
+      "items": [
+        {
+          "id": "gaseosa",
+          "nombre": "Gaseosa",
+          "precio": 2500,
+          "descripcion": "Línea Coca-Cola, 500 ml. Bien fría, como corresponde.",
+          "fondo": "pan",
+          "arte": { "tipo": "vaso", "banda": "#e0301e", "tapa": "#1a1210", "texto": "HUMO" }
+        },
+        {
+          "id": "limonada",
+          "nombre": "Limonada",
+          "precio": 3200,
+          "etiqueta": "Casera",
+          "descripcion": "Limón exprimido, menta y jengibre. Recién hecha.",
+          "fondo": "lechuga",
+          "arte": { "tipo": "vaso", "banda": "#6e8b2b", "tapa": "#f2b705", "texto": "HUMO" }
+        },
+        {
+          "id": "ipa",
+          "nombre": "Pinta IPA",
+          "precio": 4200,
+          "descripcion": "Cerveza artesanal tirada, amarga y aromática.",
+          "fondo": "papel-madera",
+          "arte": { "tipo": "pinta" }
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres",
+      "items": [
+        {
+          "id": "shake-ddl",
+          "nombre": "Shake DDL",
+          "precio": 4900,
+          "etiqueta": "Favorito",
+          "descripcion": "Helado de dulce de leche, crema y salsa de caramelo.",
+          "fondo": "mostaza",
+          "arte": { "tipo": "shake", "color": "#c98b4f", "salsa": "#7a3f12" }
+        },
+        {
+          "id": "shake-frutilla",
+          "nombre": "Shake Frutilla",
+          "precio": 4900,
+          "descripcion": "Frutillas frescas, helado de crema y crema batida.",
+          "fondo": "frutilla",
+          "arte": { "tipo": "shake", "color": "#f2a7b8", "salsa": "#e0301e" }
+        },
+        {
+          "id": "cookie",
+          "nombre": "Cookie gigante",
+          "precio": 2900,
+          "descripcion": "Tibia, crocante afuera y blanda adentro. Con chips de chocolate.",
+          "fondo": "pan",
+          "arte": { "tipo": "cookie" }
+        }
+      ]
+    }
+  ]
+}

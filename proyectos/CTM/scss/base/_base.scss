@@ -1,0 +1,62 @@
+// =========================================================
+// Base (complementa el reboot de Bootstrap)
+// =========================================================
+
+:root {
+  // Los fondos del mapa quedan como variables CSS: el JSON los pide por nombre
+  @each $nombre, $color in $fondos {
+    --fondo-#{$nombre}: #{$color};
+  }
+}
+
+html {
+  scroll-padding-top: $alto-nav;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+
+  // Grano de papel impreso
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: .14;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+svg { display: block; max-width: 100%; }
+
+::selection { background: $mostaza; color: $tinta; }
+
+:focus-visible { outline: 3px solid $ketchup; outline-offset: 3px; }
+
+.saltar {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 2000;
+  padding: .8em 1.2em;
+  border-radius: $radio-pildora;
+  background: $tinta;
+  color: $crema;
+  font-weight: 700;
+
+  &:focus { top: 16px; color: $crema; }
+}
+
+// Aparición al scrollear (solo si hay JS)
+.js [data-reveal] {
+  opacity: 0;
+  translate: 0 40px;
+  transition: opacity .8s $suave, translate .9s $suave;
+  transition-delay: var(--retraso, 0s);
+
+  &.visto { opacity: 1; translate: 0 0; }
+}

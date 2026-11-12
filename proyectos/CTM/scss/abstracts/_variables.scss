@@ -1,0 +1,45 @@
+// =========================================================
+// Variables de marca
+// =========================================================
+
+// Paleta
+$crema: #f5ebd7;
+$crema-2: #ecdcbc;
+$papel: #fbf5e9;
+$tinta: #1a1210;
+$tinta-2: #4a3a33;
+$ketchup: #e0301e;
+$mostaza: #f2b705;
+$pepino: #6e8b2b;
+$verde-abierto: #4cc04c;
+
+// Fondos de las tarjetas, usados también desde los JSON
+$fondos: (
+  "pan": #f5c98a,
+  "mostaza": $mostaza,
+  "tomate": #f07a5c,
+  "papel-madera": #e8d3b0,
+  "lechuga": #b9c77a,
+  "frutilla": #f3d3e2
+);
+
+// Tipografía
+$fuente-display: "Bricolage Grotesque", system-ui, sans-serif;
+$fuente-serif: "Instrument Serif", Georgia, serif;
+
+// Forma
+$grosor-borde: 3px;
+$borde: $grosor-borde solid $tinta;
+$radio: 22px;
+$radio-chico: 14px;
+$radio-pildora: 999px;
+
+// Espaciado
+$gutter: clamp(16px, 4vw, 56px);
+$alto-nav: 88px;
+$espacio-seccion: clamp(80px, 11vw, 150px);
+
+// Movimiento
+$rebote: cubic-bezier(.3, 1.6, .5, 1);
+$suave: cubic-bezier(.2, .9, .2, 1);
+$telon: cubic-bezier(.7, 0, .2, 1);

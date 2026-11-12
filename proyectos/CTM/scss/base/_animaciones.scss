@@ -1,0 +1,42 @@
+// =========================================================
+// Animaciones
+// =========================================================
+
+@keyframes subir { from { translate: 0 40%; opacity: 0; } }
+@keyframes caer { from { translate: 0 -320px; opacity: 0; } }
+@keyframes caer-corto { from { translate: 0 -180px; opacity: 0; } }
+@keyframes entrar { from { translate: 0 30px; opacity: 0; } }
+@keyframes pop { from { scale: 0; } }
+@keyframes girar { to { rotate: 360deg; } }
+@keyframes marquesina { to { transform: translateX(-50%); } }
+
+@keyframes flotar {
+  50% { translate: 0 -10px; rotate: -1.5deg; }
+}
+
+@keyframes balanceo {
+  50% { transform: rotate(6deg) translateY(-5px); }
+}
+
+@keyframes bump {
+  40% { scale: 1.25; rotate: -12deg; }
+}
+
+@keyframes aplastar {
+  30% { scale: 1.04 .94; }
+}
+
+@keyframes pulso {
+  from { scale: .4; opacity: 1; }
+  to { scale: 2.4; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

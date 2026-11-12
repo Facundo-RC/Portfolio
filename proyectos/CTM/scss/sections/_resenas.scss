@@ -1,0 +1,52 @@
+// =========================================================
+// Reseñas
+// =========================================================
+
+.resenas { padding-right: 0; }
+
+.resenas-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 24px;
+  padding: 14px $gutter 30px 6px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+}
+
+.resena {
+  @extend %tarjeta;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 28px;
+  scroll-snap-align: start;
+  @include escalonar(6, .08s);
+
+  &:nth-child(even) { background: $crema-2; }
+
+  blockquote {
+    flex: 1;
+    margin: 0;
+    font-family: $fuente-serif;
+    font-size: fluido(23, 30);
+    line-height: 1.12;
+  }
+
+  figcaption {
+    color: $tinta-2;
+    font-size: .92rem;
+
+    strong { color: $tinta; }
+  }
+}
+
+.estrellas {
+  color: $ketchup;
+  font-size: 1.15rem;
+  letter-spacing: .15em;
+}

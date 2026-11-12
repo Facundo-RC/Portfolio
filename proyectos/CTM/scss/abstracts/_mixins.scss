@@ -1,0 +1,73 @@
+// =========================================================
+// Mixins y placeholders
+// =========================================================
+
+// Borde de tinta, la firma visual de la marca
+@mixin borde-tinta($radio: $radio) {
+  border: $borde;
+  border-radius: $radio;
+}
+
+// Sombra dura, estilo sticker impreso
+@mixin sombra-dura($distancia: 6px) {
+  box-shadow: $distancia $distancia 0 $tinta;
+}
+
+// Al pasar el mouse el elemento "se despega" del papel
+@mixin despegar($distancia: 6px, $extra: 3px) {
+  transition: transform .25s $suave, box-shadow .25s $suave;
+
+  &:hover {
+    transform: translate(-$extra, -$extra);
+    box-shadow: ($distancia + $extra) ($distancia + $extra) 0 $tinta;
+  }
+}
+
+// Títulos condensados gigantes
+@mixin display($tamano, $alto-linea: .85) {
+  font-family: $fuente-display;
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: $tamano;
+  line-height: $alto-linea;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+// Texto chico en versalitas espaciadas
+@mixin etiqueta($tamano: .78rem) {
+  font-size: $tamano;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+// Trama de puntos de imprenta
+@mixin trama($color: tono($tinta, .18), $paso: 20px) {
+  background-image: radial-gradient(circle at 1px 1px, $color 1.5px, transparent 0);
+  background-size: $paso $paso;
+}
+
+// Retraso escalonado para los hijos (usado por las animaciones de aparición)
+@mixin escalonar($cantidad, $paso: .08s, $desde: 0s) {
+  @for $i from 1 through $cantidad {
+    &:nth-child(#{$i}) { --retraso: #{$desde + ($i - 1) * $paso}; }
+  }
+}
+
+// Base compartida por todas las tarjetas
+%tarjeta {
+  @include borde-tinta;
+  @include sombra-dura;
+  background: $papel;
+  overflow: hidden;
+}
+
+// Botón circular de ícono (carrito, menú, cerrar)
+%boton-redondo {
+  display: grid;
+  place-items: center;
+  border: $borde;
+  border-radius: 50%;
+  cursor: pointer;
+}

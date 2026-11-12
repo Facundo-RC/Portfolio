@@ -1,0 +1,30 @@
+// =========================================================
+// Secciones
+// =========================================================
+
+.seccion {
+  padding: $espacio-seccion $gutter;
+
+  &-head {
+    margin-bottom: clamp(36px, 5vw, 64px);
+
+    .bajada { margin-left: auto; }
+
+    @include media-breakpoint-down(lg) {
+      .bajada { margin-left: 0; }
+    }
+  }
+}
+
+// Estado de error al cargar los JSON
+.error-carga {
+  @include borde-tinta;
+  @include sombra-dura;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  background: $papel;
+
+  code { padding: .1em .4em; border-radius: 6px; background: $crema-2; color: $tinta; }
+}

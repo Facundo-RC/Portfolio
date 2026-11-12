@@ -1,0 +1,13 @@
+// =========================================================
+// Aviso (toast de Bootstrap)
+// =========================================================
+
+.toast-humo {
+  width: auto;
+  font-weight: 700;
+
+  .toast-body { padding: var(--bs-toast-padding-y) var(--bs-toast-padding-x); }
+
+  &.showing,
+  &.show { animation: entrar .45s $rebote; }
+}

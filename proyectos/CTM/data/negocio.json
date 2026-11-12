@@ -1,0 +1,15 @@
+{
+  "nombre": "HUMO",
+  "whatsapp": "5491100000000",
+  "envio": 1500,
+  "horario": {
+    "texto": "Martes a domingo · 12 a 16 h y 19 a 00 h. Los lunes descansamos la plancha.",
+    "diasCerrado": [1],
+    "turnos": [[12, 16], [19, 24]]
+  },
+  "locales": [
+    { "id": "centro", "nombre": "Centro", "direccion": "Av. Libertad 1450", "mapa": [12, 30], "comoLlegar": "#" },
+    { "id": "norte", "nombre": "Norte", "direccion": "Calle de los Robles 820", "mapa": [48, 4], "comoLlegar": "#" },
+    { "id": "puerto", "nombre": "Puerto", "direccion": "Muelle 3, Galpón 12", "mapa": [70, 52], "comoLlegar": "#" }
+  ]
+}

@@ -1,0 +1,35 @@
+// =========================================================
+// Selector de cantidad (− 1 +)
+// =========================================================
+
+.stepper {
+  display: flex;
+  align-items: center;
+  border: $borde;
+  border-radius: $radio-pildora;
+  background: $papel;
+  overflow: hidden;
+
+  button {
+    width: 38px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: background .15s;
+
+    &:hover:not(:disabled) { background: $mostaza; }
+    &:disabled { opacity: .3; cursor: not-allowed; }
+  }
+
+  output {
+    min-width: 26px;
+    font-weight: 800;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &--chico button { width: 32px; height: 32px; font-size: 1.05rem; }
+}

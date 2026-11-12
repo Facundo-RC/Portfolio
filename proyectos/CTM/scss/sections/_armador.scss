@@ -1,0 +1,134 @@
+// =========================================================
+// Armá la tuya
+// =========================================================
+
+.escenario {
+  @extend %tarjeta;
+  @include trama(tono($tinta, .2), 22px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  min-height: 600px;
+  padding: 90px 24px 70px;
+  background-color: $mostaza;
+
+  @include media-breakpoint-down(lg) { min-height: 520px; }
+}
+
+.arma-burger {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 86%);
+
+  svg { width: 100%; height: auto; overflow: visible; }
+
+  &.rebote svg { animation: aplastar .45s $rebote; }
+  .capa.nueva { animation: caer-corto .6s $rebote backwards; }
+}
+
+.arma-plato {
+  @include borde-tinta(50%);
+  width: min(520px, 96%);
+  height: 38px;
+  margin-top: -18px;
+  background: $papel;
+}
+
+.hambrometro {
+  @include borde-tinta($radio-pildora);
+  @include etiqueta(.8rem);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: $papel;
+  letter-spacing: .06em;
+
+  strong { min-width: 9ch; text-align: right; }
+
+  &-barra {
+    flex: 1;
+    height: 12px;
+    border: 2px solid $tinta;
+    border-radius: $radio-pildora;
+    overflow: hidden;
+
+    i {
+      display: block;
+      width: var(--nivel, 30%);
+      height: 100%;
+      background: repeating-linear-gradient(-45deg, $ketchup 0 8px, #f05a3e 8px 16px);
+      transition: width .5s $rebote;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    > span { display: none; }
+  }
+}
+
+.panel-armado {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  --retraso: .12s;
+}
+
+.ingredientes {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ing {
+  @include borde-tinta(16px);
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px 10px 14px;
+  background: $papel;
+  transition: background .2s;
+
+  &.activo { background: #fff; }
+
+  &-icono {
+    height: 34px;
+
+    svg { width: 100%; height: 100%; }
+  }
+
+  &-nombre {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+
+    strong { font-weight: 700; }
+    small { color: $tinta-2; font-size: .82rem; }
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 44px 1fr auto;
+    gap: 10px;
+  }
+}
+
+.arma-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 14px;
+  border-top: 2px dashed tono($tinta, .3);
+
+  span { @include etiqueta(.85rem); letter-spacing: .12em; }
+  .precio { font-size: fluido(42, 56); }
+}
