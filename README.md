@@ -18,7 +18,7 @@ Portfolio personal: Analista de Sistemas y estudiante de Desarrollo Full Stack.
 
 ## Tecnologías
 
-HTML, CSS (Tailwind compilado) y JavaScript sin frameworks.
+HTML, CSS  y JavaScript .
 
 ## Estructura
 
@@ -30,6 +30,4 @@ js/main.js       interacciones
 assets/          capturas de proyectos y favicon
 ```
 
-## Ver en local
 
-Abrir `index.html` en el navegador, o servir la carpeta con cualquier servidor estático.
