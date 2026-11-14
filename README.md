@@ -6,8 +6,8 @@ Portfolio personal: Analista de Sistemas y estudiante de Desarrollo Full Stack.
 
 - Diseño oscuro con acento lima, tipografías Bricolage Grotesque, Instrument Serif, Manrope y JetBrains Mono.
 - Cabecera fija con barra de progreso de lectura y sección activa resaltada.
-- Tarjeta de código con pestañas (C# y JavaScript) y botón para copiar.
-- Proyectos con modal de detalle (Automotora y Patitas Hogar).
+- Tarjeta de código con pestañas (JavaScript y JSX) y botón para copiar.
+- Proyectos con modal de detalle (HUMO y Rumbo Sur).
 - Formulario de contacto validado que abre el correo con el mensaje listo.
 - Cursor personalizado con estela y ondas al hacer clic (solo en PC).
 - Animaciones de entrada al hacer scroll y diseño responsive.
@@ -20,6 +20,11 @@ Portfolio personal: Analista de Sistemas y estudiante de Desarrollo Full Stack.
 
 HTML, CSS  y JavaScript .
 
+## Proyectos
+
+- **HUMO** (`proyectos/CTM`): sitio de una hamburguesería con menú desde JSON, armador de hamburguesas, carrito y pedido por WhatsApp. JavaScript, Bootstrap 5 y Sass.
+- **Rumbo Sur** (`proyectos/RumboSur`): sitio de una agencia de viajes con catálogo de paquetes, cotizador, carrito y reservas. React 19, TanStack Start, Tailwind y Sass.
+
 ## Estructura
 
 ```
@@ -28,6 +33,7 @@ css/styles.css   estilos compilados
 css/extra.css    animaciones y ajustes propios
 js/main.js       interacciones
 assets/          capturas de proyectos y favicon
+proyectos/       código de cada proyecto
 ```
 
 

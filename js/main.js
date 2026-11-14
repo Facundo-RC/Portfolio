@@ -15,53 +15,55 @@
 
   const PROYECTOS = [
     {
-      number: '01', title: 'Automotora', category: 'Full stack · API REST', year: '2025',
-      description: 'Aplicación para gestionar vehículos con API REST en C# / ASP.NET Core 8, Entity Framework Core y SQL Server. El frontend, en JavaScript sin frameworks, integra filtros combinados, paginado, validaciones y un plan de pruebas documentado.',
-      tags: ['C#', 'ASP.NET Core 8', 'SQL Server', 'JavaScript'],
+      number: '01', title: 'HUMO', category: 'Frontend · E-commerce', year: '2026',
+      description: 'Sitio de una hamburguesería con estética de póster retro. El menú se carga desde JSON, un armador apila la hamburguesa en vivo con el precio al momento, y el carrito persiste en localStorage con el pedido armado por WhatsApp.',
+      tags: ['JavaScript', 'Bootstrap 5', 'Sass', 'JSON'],
       highlights: [
-        'API REST con operaciones CRUD sobre Entity Framework Core',
-        'Filtros combinados, paginado y validaciones en el frontend',
-        'Plan de pruebas documentado sobre los flujos principales',
+        'Menú dinámico con fetch y pestañas, más un armador de hamburguesas en tiempo real',
+        'Carrito en offcanvas con persistencia en localStorage y checkout validado',
+        'Ilustraciones SVG generadas por código, accesible y con prefers-reduced-motion',
       ],
-      image: 'assets/automotora.webp', imageAlt: 'Captura del catálogo de vehículos de Automotora',
-      demo: 'https://facundo-rc.github.io/automotora/', repository: 'https://github.com/Facundo-RC/automotora',
+      image: 'assets/humo.webp', imageAlt: 'Captura del sitio HUMO Smash Burgers',
+      demo: 'https://facundo-rc.github.io/Portfolio/proyectos/CTM/',
+      repository: 'https://github.com/Facundo-RC/Portfolio/tree/main/proyectos/CTM',
     },
     {
-      number: '02', title: 'Patitas Hogar', category: 'Frontend · Adopción responsable', year: '2025',
-      description: 'Sitio responsive para conectar perros rescatados con familias. Incluye filtros por categoría, navegación adaptable y un formulario de contacto validado con JavaScript y el DOM.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'DOM'],
+      number: '02', title: 'Rumbo Sur', category: 'Full stack · Agencia de viajes', year: '2026',
+      description: 'Sitio de una agencia de viajes con catálogo de paquetes, cotizador, carrito y reservas. Hecho con TanStack Start (React 19) y Sass, renderizado en el servidor y desplegable en Cloudflare Workers.',
+      tags: ['React 19', 'TanStack Start', 'Tailwind', 'Sass'],
       highlights: [
-        'Filtros por categoría y navegación adaptable a móvil',
-        'Formulario de contacto validado con JavaScript y el DOM',
-        'Diseño responsive con foco en accesibilidad',
+        'Catálogo de paquetes con búsqueda por destino, tipo de viaje y mes de salida',
+        'Cotización al instante, carrito y reservas con selector de moneda USD / UYU',
+        'Renderizado en el servidor con estado persistido en el navegador',
       ],
-      image: 'assets/adopcion.webp', imageAlt: 'Captura del sitio Patitas Hogar para adopción de perros',
-      demo: 'https://facundo-rc.github.io/Porfolio/proyectos/adopcion-perros-cv/',
-      repository: 'https://github.com/Facundo-RC/Porfolio/tree/main/proyectos/adopcion-perros-cv',
+      image: 'assets/rumbosur.webp', imageAlt: 'Captura del sitio de la agencia de viajes Rumbo Sur',
+      demo: '', repository: 'https://github.com/Facundo-RC/Portfolio/tree/main/proyectos/RumboSur',
     },
   ];
 
   const SNIPPETS = [
     {
-      badge: 'API REST · SQL Server', language: 'C#',
+      badge: 'Carrito · localStorage', language: 'JavaScript',
       lines: [
-        [['public', 'kw'], [' async ', 'plain'], ['Task', 'type'], ['<', 'plain'], ['IActionResult', 'type'], ['> ', 'plain'], ['Filtrar', 'fn'], ['(', 'plain'], ['FiltroDto', 'type'], [' filtro)', 'plain']],
-        [['{', 'plain']],
-        [['    ', 'plain'], ['var', 'kw'], [' q = _context.Vehiculos.', 'plain'], ['AsQueryable', 'fn'], ['();', 'plain']],
-        [['    ', 'plain'], ['// filtros combinados + paginado', 'comment']],
-        [['    ', 'plain'], ['return', 'kw'], [' ', 'plain'], ['Ok', 'fn'], ['(', 'plain'], ['await', 'kw'], [' q.', 'plain'], ['ToListAsync', 'fn'], ['());', 'plain']],
-        [['}', 'plain']],
+        [['const', 'kw'], [' cantidad = () => items.', 'plain'], ['reduce', 'fn'], ['((n, i) => n + i.cant, 0);', 'plain']],
+        [['const', 'kw'], [' subtotal = () => items.', 'plain'], ['reduce', 'fn'], ['((n, i) => n + i.cant * i.precio, 0);', 'plain']],
+        [['const', 'kw'], [' envio = () => campos.entrega.value === ', 'plain'], ["'delivery'", 'type']],
+        [['  ? negocio.envio : 0;', 'plain']],
+        [['', 'plain']],
+        [['// el total se recalcula en cada cambio', 'comment']],
+        [['$(', 'plain'], ["'#carritoTotal'", 'type'], [').textContent = ', 'plain'], ['precio', 'fn'], ['(subtotal());', 'plain']],
       ],
     },
     {
-      badge: 'DOM · Validación', language: 'JavaScript',
+      badge: 'Estado · SSR', language: 'JSX',
       lines: [
-        [['const', 'kw'], [' filtro = document.', 'plain'], ['querySelector', 'fn'], ["('#filtro');", 'plain']],
-        [['', 'plain']],
-        [['filtro.', 'plain'], ['addEventListener', 'fn'], ["('change', () => {", 'plain']],
-        [['  ', 'plain'], ['const', 'kw'], [' visibles = perros.', 'plain'], ['filter', 'fn'], ['(p => p.categoria === filtro.value);', 'plain']],
-        [['  ', 'plain'], ['render', 'fn'], ['(visibles);', 'plain']],
-        [['});', 'plain']],
+        [['export', 'kw'], [' ', 'plain'], ['function', 'kw'], [' ', 'plain'], ['ViajeProvider', 'fn'], ['({ children }) {', 'plain']],
+        [['  ', 'plain'], ['const', 'kw'], [' [carrito, setCarrito] = ', 'plain'], ['useState', 'fn'], ['([]);', 'plain']],
+        [['  ', 'plain'], ['// lo guardado se lee ya en el navegador', 'comment']],
+        [['  ', 'plain'], ['useEffect', 'fn'], ['(() => {', 'plain']],
+        [['    ', 'plain'], ['setCarrito', 'fn'], ['(', 'plain'], ['leerGuardado', 'fn'], ['(CLAVES.carrito, []));', 'plain']],
+        [['  }, []);', 'plain']],
+        [['}', 'plain']],
       ],
     },
   ];
@@ -242,7 +244,7 @@
           <ul class="mt-6 flex flex-wrap gap-1.5">${p.tags.map((t) =>
             `<li class="rounded-full border border-border/70 bg-secondary/40 px-2.5 py-1 font-mono text-[10px] text-foreground/75">${esc(t)}</li>`).join('')}</ul>
           <div class="mt-7 flex flex-wrap gap-3 border-t border-border/60 pt-6">
-            <a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-shadow hover:shadow-[0_16px_40px_-18px_hsl(var(--primary)/0.9)]">Abrir demo${ICONOS.flecha}</a>
+            ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-shadow hover:shadow-[0_16px_40px_-18px_hsl(var(--primary)/0.9)]">Abrir demo${ICONOS.flecha}</a>` : ''}
             <a href="${p.repository}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary">${ICONOS.github}Ver código</a>
           </div>
         </div>
