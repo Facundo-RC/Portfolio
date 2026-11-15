@@ -7,7 +7,6 @@ import Reveal from "@/components/Reveal";
 import BotonSolar from "@/components/BotonSolar";
 import { useViaje } from "@/context/ViajeContext";
 import { ETIQUETAS_TIPO, MESES_DISPONIBLES, REGIONES, buscarPaquetes } from "@/lib/catalogo";
-import { COTIZACION_UYU } from "@/lib/formato";
 import paquetesBase from "@/data/paquetes";
 
 export const Route = createFileRoute("/_site/paquetes/")({
@@ -87,7 +86,7 @@ function Paquetes() {
           <p className="cabecera-catalogo__meta">
             <span>12 destinos</span>
             <span>36 salidas</span>
-            <span>Cotización en pesos a $ {COTIZACION_UYU}</span>
+            <span>Precios en dólares</span>
           </p>
         </div>
       </section>
@@ -128,8 +127,7 @@ function Paquetes() {
         )}
 
         <p className="suave" style={{ marginTop: "2.5rem", fontSize: "0.85rem" }}>
-          Precios en dólares por persona en habitación doble. Los pesos se calculan con una cotización de referencia de
-          $ {COTIZACION_UYU}.{" "}
+          Precios en dólares por persona en habitación doble.{" "}
           <Link to="/reservas" className="enlace-linea">
             Ver mis reservas
           </Link>

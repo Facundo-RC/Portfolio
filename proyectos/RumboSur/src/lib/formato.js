@@ -1,14 +1,8 @@
 // Formato de precios y fechas.
 // Todos los precios del catálogo están en dólares por persona en habitación doble.
 
-// Cotización de referencia para mostrar precios en pesos. Es un valor fijo de demo.
-export const COTIZACION_UYU = 40;
-
-export function formatearPrecio(usd, moneda = "USD") {
-  const enPesos = moneda === "UYU";
-  const valor = enPesos ? usd * COTIZACION_UYU : usd;
-  const numero = Math.round(valor).toLocaleString("es-UY");
-  return enPesos ? `$ ${numero}` : `US$ ${numero}`;
+export function formatearPrecio(usd) {
+  return `US$ ${Math.round(usd).toLocaleString("es-UY")}`;
 }
 
 export function formatearFecha(iso, opciones = { day: "numeric", month: "long", year: "numeric" }) {

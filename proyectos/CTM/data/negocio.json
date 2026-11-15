@@ -1,7 +1,7 @@
 {
   "nombre": "HUMO",
   "whatsapp": "5491100000000",
-  "envio": 1500,
+  "envio": 90,
   "horario": {
     "texto": "Martes a domingo · 12 a 16 h y 19 a 00 h. Los lunes descansamos la plancha.",
     "diasCerrado": [1],

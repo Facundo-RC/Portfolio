@@ -23,7 +23,7 @@ HTML, CSS  y JavaScript .
 ## Proyectos
 
 - **HUMO** (`proyectos/CTM`): sitio de una hamburguesería con menú desde JSON, armador de hamburguesas, carrito y pedido por WhatsApp. JavaScript, Bootstrap 5 y Sass.
-- **Rumbo Sur** (`proyectos/RumboSur`): sitio de una agencia de viajes con catálogo de paquetes, cotizador, carrito y reservas. React 19, TanStack Start, Tailwind y Sass.
+- **Rumbo Sur** (`proyectos/RumboSur`): sitio de una agencia de viajes con catálogo de paquetes, cotizador, carrito y reservas. React 19, TanStack Start, Tailwind y Sass. Demo estática en `proyectos/RumboSur/demo` (se regenera con `npm run build:demo`).
 
 ## Estructura
 

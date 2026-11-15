@@ -7,7 +7,7 @@
         {
           "id": "clasica",
           "nombre": "La Clásica",
-          "precio": 8900,
+          "precio": 370,
           "descripcion": "Medallón smash, cheddar, lechuga, tomate y salsa HUMO.",
           "fondo": "pan",
           "capas": ["panArriba", "lechuga", "tomate", "queso", "carne", "panAbajo"]
@@ -15,7 +15,7 @@
         {
           "id": "doble",
           "nombre": "Doble Humo",
-          "precio": 11500,
+          "precio": 480,
           "etiqueta": "La más pedida",
           "descripcion": "Doble medallón, doble cheddar, cebolla y bacon crocante.",
           "fondo": "mostaza",
@@ -24,7 +24,7 @@
         {
           "id": "triple",
           "nombre": "Triple Amenaza",
-          "precio": 13900,
+          "precio": 580,
           "etiqueta": "Solo valientes",
           "descripcion": "Tres medallones, triple cheddar, pepinos y mostaza.",
           "fondo": "tomate",
@@ -33,7 +33,7 @@
         {
           "id": "bacon",
           "nombre": "Bacon Bomb",
-          "precio": 12200,
+          "precio": 510,
           "descripcion": "Doble bacon, cheddar, cebolla caramelizada y barbacoa ahumada.",
           "fondo": "papel-madera",
           "capas": ["panArriba", "bacon", "bacon", "cebolla", "queso", "carne", "panAbajo"]
@@ -41,7 +41,7 @@
         {
           "id": "verde",
           "nombre": "La Verde",
-          "precio": 9500,
+          "precio": 400,
           "etiqueta": "Veggie",
           "descripcion": "Medallón de garbanzos y hongos, cheddar, lechuga, tomate y alioli.",
           "fondo": "lechuga",
@@ -50,7 +50,7 @@
         {
           "id": "kids",
           "nombre": "Smash Kids",
-          "precio": 6900,
+          "precio": 290,
           "descripcion": "Medallón simple con cheddar y ketchup. Viene con sorpresa.",
           "fondo": "frutilla",
           "capas": ["panArriba", "queso", "carne", "panAbajo"]
@@ -64,7 +64,7 @@
         {
           "id": "papas-humo",
           "nombre": "Papas HUMO",
-          "precio": 5200,
+          "precio": 220,
           "etiqueta": "Para compartir",
           "descripcion": "Papas rústicas con cheddar fundido, bacon y verdeo.",
           "fondo": "mostaza",
@@ -73,7 +73,7 @@
         {
           "id": "papas",
           "nombre": "Papas clásicas",
-          "precio": 3800,
+          "precio": 160,
           "descripcion": "Cortadas a mano, doble cocción y sal en escamas.",
           "fondo": "papel-madera",
           "arte": { "tipo": "papas", "cheddar": false }
@@ -81,7 +81,7 @@
         {
           "id": "aros",
           "nombre": "Aros de cebolla",
-          "precio": 4300,
+          "precio": 180,
           "descripcion": "Rebozados en cerveza, con dip de barbacoa ahumada.",
           "fondo": "tomate",
           "arte": { "tipo": "aros" }
@@ -95,7 +95,7 @@
         {
           "id": "gaseosa",
           "nombre": "Gaseosa",
-          "precio": 2500,
+          "precio": 110,
           "descripcion": "Línea Coca-Cola, 500 ml. Bien fría, como corresponde.",
           "fondo": "pan",
           "arte": { "tipo": "vaso", "banda": "#e0301e", "tapa": "#1a1210", "texto": "HUMO" }
@@ -103,7 +103,7 @@
         {
           "id": "limonada",
           "nombre": "Limonada",
-          "precio": 3200,
+          "precio": 130,
           "etiqueta": "Casera",
           "descripcion": "Limón exprimido, menta y jengibre. Recién hecha.",
           "fondo": "lechuga",
@@ -112,7 +112,7 @@
         {
           "id": "ipa",
           "nombre": "Pinta IPA",
-          "precio": 4200,
+          "precio": 180,
           "descripcion": "Cerveza artesanal tirada, amarga y aromática.",
           "fondo": "papel-madera",
           "arte": { "tipo": "pinta" }
@@ -126,7 +126,7 @@
         {
           "id": "shake-ddl",
           "nombre": "Shake DDL",
-          "precio": 4900,
+          "precio": 210,
           "etiqueta": "Favorito",
           "descripcion": "Helado de dulce de leche, crema y salsa de caramelo.",
           "fondo": "mostaza",
@@ -135,7 +135,7 @@
         {
           "id": "shake-frutilla",
           "nombre": "Shake Frutilla",
-          "precio": 4900,
+          "precio": 210,
           "descripcion": "Frutillas frescas, helado de crema y crema batida.",
           "fondo": "frutilla",
           "arte": { "tipo": "shake", "color": "#f2a7b8", "salsa": "#e0301e" }
@@ -143,7 +143,7 @@
         {
           "id": "cookie",
           "nombre": "Cookie gigante",
-          "precio": 2900,
+          "precio": 120,
           "descripcion": "Tibia, crocante afuera y blanda adentro. Con chips de chocolate.",
           "fondo": "pan",
           "arte": { "tipo": "cookie" }

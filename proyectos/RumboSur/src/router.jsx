@@ -15,6 +15,7 @@ export function getRouter() {
     defaultErrorComponent: DefaultCatchBoundary,
     defaultNotFoundComponent: () => <NotFound />,
     scrollRestoration: true,
+    basepath: import.meta.env.BASE_URL.replace(/\/$/, "") || "/",
   });
   // Provides QueryClientProvider and ships queries fetched during SSR to the browser cache.
   setupRouterSsrQueryIntegration({ router, queryClient });

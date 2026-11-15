@@ -5,7 +5,7 @@ import { generarCodigo, generarId, guardar, leerGuardado } from "@/lib/reservas"
 
 const ViajeContext = createContext(null);
 
-const CLAVES = { carrito: "rumbosur:carrito", reservas: "rumbosur:reservas", moneda: "rumbosur:moneda" };
+const CLAVES = { carrito: "rumbosur:carrito", reservas: "rumbosur:reservas" };
 
 /** Une un ítem del carrito con su paquete y su cotización. Descarta ítems de paquetes que ya no existen. */
 function enriquecer(item) {
@@ -21,15 +21,13 @@ export function ViajeProvider({ children }) {
   // lo guardado se lee en un efecto, ya en el navegador.
   const [carrito, setCarrito] = useState([]);
   const [reservas, setReservas] = useState([]);
-  const [moneda, setMoneda] = useState("USD");
+  const moneda = "USD";
   const [aviso, setAviso] = useState(null);
   const [listo, setListo] = useState(false);
 
   useEffect(() => {
     setCarrito(leerGuardado(CLAVES.carrito, []));
     setReservas(leerGuardado(CLAVES.reservas, []));
-    const guardada = leerGuardado(CLAVES.moneda, "USD");
-    if (guardada === "UYU" || guardada === "USD") setMoneda(guardada);
     setListo(true);
   }, []);
 
@@ -40,10 +38,6 @@ export function ViajeProvider({ children }) {
   useEffect(() => {
     if (listo) guardar(CLAVES.reservas, reservas);
   }, [reservas, listo]);
-
-  useEffect(() => {
-    if (listo) guardar(CLAVES.moneda, moneda);
-  }, [moneda, listo]);
 
   useEffect(() => {
     if (!aviso) return undefined;
@@ -99,7 +93,6 @@ export function ViajeProvider({ children }) {
     reservas,
     moneda,
     aviso,
-    setMoneda,
     agregar,
     quitar,
     vaciar,

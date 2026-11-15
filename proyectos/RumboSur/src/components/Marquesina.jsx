@@ -6,7 +6,7 @@ const FRASES = [
   "Guías locales",
   "Salidas desde Montevideo",
   "Cotización al instante",
-  "Pago en pesos o dólares",
+  "Precios en dólares",
 ];
 
 export default function Marquesina() {

@@ -11,7 +11,7 @@ const ENLACES = [
 ];
 
 export default function Cabecera() {
-  const { items, moneda, setMoneda } = useViaje();
+  const { items } = useViaje();
   const ruta = useRouterState({ select: (estado) => estado.location.pathname });
   const [fija, setFija] = useState(false);
   const [progreso, setProgreso] = useState(0);
@@ -79,19 +79,6 @@ export default function Cabecera() {
         </nav>
 
         <div className="cabecera__acciones">
-          <div className="moneda" role="group" aria-label="Moneda de los precios">
-            {["USD", "UYU"].map((codigo) => (
-              <button
-                key={codigo}
-                type="button"
-                aria-pressed={moneda === codigo}
-                onClick={() => setMoneda(codigo)}
-              >
-                {codigo === "USD" ? "US$" : "$U"}
-              </button>
-            ))}
-          </div>
-
           <Link
             to="/carrito"
             className="carrito-icono"

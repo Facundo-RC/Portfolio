@@ -13,7 +13,7 @@ const VIAJEROS = [
     nombre: "Lucía y Nacho",
     viaje: "Punta Cana",
     cita: "Nos subimos al bote muertos de risa y no bajamos en todo el día. Aéreos, hotel y excursión, todo resuelto.",
-    foto: "/imagenes/gente-barco.jpg",
+    foto: `${import.meta.env.BASE_URL}imagenes/gente-barco.jpg`,
     base: 148,
   },
   {
@@ -21,7 +21,7 @@ const VIAJEROS = [
     nombre: "Carolina Vidal",
     viaje: "Torres del Paine",
     cita: "Salí sola y volví con siete amigos nuevos. La caminata al mirador fue el mejor regalo del año.",
-    foto: "/imagenes/gente-paine.jpg",
+    foto: `${import.meta.env.BASE_URL}imagenes/gente-paine.jpg`,
     base: 96,
   },
   {
@@ -29,7 +29,7 @@ const VIAJEROS = [
     nombre: "Los Ferreira",
     viaje: "Roma y Florencia",
     cita: "Los chicos todavía hablan del gelato de Trastevere. Ocho días, cero trámites, todos contentos.",
-    foto: "/imagenes/gente-familia.jpg",
+    foto: `${import.meta.env.BASE_URL}imagenes/gente-familia.jpg`,
     base: 212,
   },
   {
@@ -37,7 +37,7 @@ const VIAJEROS = [
     nombre: "Sofi, Juan, Lu y Mati",
     viaje: "Salta y Jujuy",
     cita: "Cuatro amigos, una camioneta y el mejor atardecer del norte. Ya estamos pensando en la próxima.",
-    foto: "/imagenes/gente-amigos.jpg",
+    foto: `${import.meta.env.BASE_URL}imagenes/gente-amigos.jpg`,
     base: 174,
   },
 ];

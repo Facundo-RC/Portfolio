@@ -3,18 +3,18 @@
 import crudo from "./paquetes.json";
 
 export const IMAGENES = {
-  florianopolis: "/imagenes/florianopolis.jpg",
-  bariloche: "/imagenes/bariloche.jpg",
-  "machu-picchu": "/imagenes/machu-picchu.jpg",
-  cartagena: "/imagenes/cartagena.jpg",
-  "madrid-barcelona": "/imagenes/madrid-barcelona.jpg",
-  "punta-cana": "/imagenes/punta-cana.jpg",
-  "salta-jujuy": "/imagenes/salta-jujuy.jpg",
-  "nueva-york": "/imagenes/nueva-york.jpg",
-  "torres-del-paine": "/imagenes/torres-del-paine.jpg",
-  "roma-florencia": "/imagenes/roma-florencia.jpg",
-  "valle-nevado": "/imagenes/valle-nevado.jpg",
-  "colonia-carmelo": "/imagenes/colonia-carmelo.jpg",
+  florianopolis: `${import.meta.env.BASE_URL}imagenes/florianopolis.jpg`,
+  bariloche: `${import.meta.env.BASE_URL}imagenes/bariloche.jpg`,
+  "machu-picchu": `${import.meta.env.BASE_URL}imagenes/machu-picchu.jpg`,
+  cartagena: `${import.meta.env.BASE_URL}imagenes/cartagena.jpg`,
+  "madrid-barcelona": `${import.meta.env.BASE_URL}imagenes/madrid-barcelona.jpg`,
+  "punta-cana": `${import.meta.env.BASE_URL}imagenes/punta-cana.jpg`,
+  "salta-jujuy": `${import.meta.env.BASE_URL}imagenes/salta-jujuy.jpg`,
+  "nueva-york": `${import.meta.env.BASE_URL}imagenes/nueva-york.jpg`,
+  "torres-del-paine": `${import.meta.env.BASE_URL}imagenes/torres-del-paine.jpg`,
+  "roma-florencia": `${import.meta.env.BASE_URL}imagenes/roma-florencia.jpg`,
+  "valle-nevado": `${import.meta.env.BASE_URL}imagenes/valle-nevado.jpg`,
+  "colonia-carmelo": `${import.meta.env.BASE_URL}imagenes/colonia-carmelo.jpg`,
 };
 
 const paquetes = crudo.map((paquete) => ({

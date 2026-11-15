@@ -2,10 +2,10 @@ import { ORDENES, REGIONES } from "@/lib/catalogo";
 
 const TOPES = [
   { valor: "", texto: "Sin tope" },
-  { valor: "1000", texto: "Hasta US$ 1.000" },
   { valor: "1500", texto: "Hasta US$ 1.500" },
-  { valor: "2000", texto: "Hasta US$ 2.000" },
+  { valor: "2500", texto: "Hasta US$ 2.500" },
   { valor: "3000", texto: "Hasta US$ 3.000" },
+  { valor: "4000", texto: "Hasta US$ 4.000" },
 ];
 
 export default function FiltrosCatalogo({ valores, alCambiar, alLimpiar }) {

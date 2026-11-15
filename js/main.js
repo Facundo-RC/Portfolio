@@ -37,7 +37,7 @@
         'Renderizado en el servidor con estado persistido en el navegador',
       ],
       image: 'assets/rumbosur.webp', imageAlt: 'Captura del sitio de la agencia de viajes Rumbo Sur',
-      demo: '', repository: 'https://github.com/Facundo-RC/Portfolio/tree/main/proyectos/RumboSur',
+      demo: 'https://facundo-rc.github.io/Portfolio/proyectos/RumboSur/demo/', repository: 'https://github.com/Facundo-RC/Portfolio/tree/main/proyectos/RumboSur',
     },
   ];
 

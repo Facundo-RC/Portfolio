@@ -13,8 +13,8 @@ const ITEMS = [
   },
   {
     n: "03",
-    titulo: "Pesos o dólares",
-    texto: "Cambiá la moneda desde el menú y mirá todos los precios como prefieras.",
+    titulo: "Precios en dólares",
+    texto: "Todos los precios son finales, por persona y en dólares, sin sorpresas al reservar.",
   },
 ];
 

@@ -1,14 +1,14 @@
 {
-  "base": 6200,
+  "base": 260,
   "fondo": "mostaza",
   "ingredientes": [
-    { "id": "carne", "nombre": "Medallón smash", "precio": 2600, "min": 1, "max": 3, "inicial": 2, "incluidos": 1 },
-    { "id": "queso", "nombre": "Cheddar", "precio": 900, "min": 0, "max": 3, "inicial": 2 },
-    { "id": "bacon", "nombre": "Bacon", "precio": 1300, "min": 0, "max": 2, "inicial": 1 },
-    { "id": "lechuga", "nombre": "Lechuga", "precio": 300, "min": 0, "max": 1, "inicial": 1 },
-    { "id": "tomate", "nombre": "Tomate", "precio": 500, "min": 0, "max": 1, "inicial": 0 },
-    { "id": "cebolla", "nombre": "Cebolla morada", "precio": 400, "min": 0, "max": 1, "inicial": 1 },
-    { "id": "pepinos", "nombre": "Pepinos", "precio": 400, "min": 0, "max": 1, "inicial": 0 }
+    { "id": "carne", "nombre": "Medallón smash", "precio": 110, "min": 1, "max": 3, "inicial": 2, "incluidos": 1 },
+    { "id": "queso", "nombre": "Cheddar", "precio": 40, "min": 0, "max": 3, "inicial": 2 },
+    { "id": "bacon", "nombre": "Bacon", "precio": 50, "min": 0, "max": 2, "inicial": 1 },
+    { "id": "lechuga", "nombre": "Lechuga", "precio": 10, "min": 0, "max": 1, "inicial": 1 },
+    { "id": "tomate", "nombre": "Tomate", "precio": 20, "min": 0, "max": 1, "inicial": 0 },
+    { "id": "cebolla", "nombre": "Cebolla morada", "precio": 20, "min": 0, "max": 1, "inicial": 1 },
+    { "id": "pepinos", "nombre": "Pepinos", "precio": 20, "min": 0, "max": 1, "inicial": 0 }
   ],
   "niveles": ["Picoteo", "Con hambre", "Voraz", "Bestia", "Leyenda"]
 }
