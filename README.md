@@ -2,8 +2,6 @@
 
 ### Full Stack Developer · Systems Analyst · Uruguay 🇺🇾
 
-\<p align="center">   \<a href="[https://facundo-rc.github.io/Portfolio/](https://facundo-rc.github.io/Portfolio/)">     \<img src="[https://img.shields.io/badge/🌐\_VER_PORTFOLIO-CCFF00?style=for-the-badge&labelColor=101010&color=CCFF00](https://img.shields.io/badge/🌐_VER_PORTFOLIO-CCFF00?style=for-the-badge\&labelColor=101010\&color=CCFF00)" alt="Ver portfolio"/>   \</a>   \<a href="[https://github.com/Facundo-RC](https://github.com/Facundo-RC)">     \<img src="[https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub"/>   \</a> \</p>
-
 ---
 
 ## 👨‍💻 Sobre el proyecto
