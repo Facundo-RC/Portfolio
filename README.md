@@ -12,7 +12,7 @@ Soy Analista de Sistemas y estudiante de Desarrollo Full Stack. Me interesa tran
 
 El objetivo de este proyecto es mostrar mi trabajo, compartir las tecnologías que utilizo y facilitar el contacto con profesionales y equipos de desarrollo.
 
-## 📸 Preview
+
 
 
 
